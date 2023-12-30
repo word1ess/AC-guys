@@ -4316,6 +4316,19 @@ textarea::placeholder,
   z-index: 2;
   transition: all 300ms ease;
 }
+.checkbox__without p{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.checkbox__without p::after, .checkbox__without p::before {
+  display: none;
+}
+.checkbox__without .custom-checkbox:checked + p {
+  color: #e31e3d;
+}
+.checkbox__without .custom-checkbox:disabled + p {
+  color: #b3bcc5;
+}
 
 .custom-checkbox {
   position: absolute;
@@ -4456,46 +4469,6 @@ textarea::placeholder,
 }
 .swiper-mounth .swiper-button-next::after,
 .swiper-mounth .swiper-button-prev::after {
-  font-size: 15px;
-}
-
-.swiper-day {
-  width: 900px;
-  margin: 0 auto;
-  margin-bottom: 60px;
-  position: relative;
-}
-.swiper-day::before, .swiper-day::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 80px;
-  top: 0px;
-  left: 0px;
-  z-index: 10;
-  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgb(255, 255, 255) 100%);
-}
-.swiper-day::after {
-  left: auto;
-  right: 0px;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(255, 255, 255) 100%);
-}
-.swiper-day .swiper-slide {
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #bcbcbc;
-}
-.swiper-day .swiper-slide.swiper-slide-active {
-  border-color: #e31e3d;
-}
-.swiper-day .swiper-button-next,
-.swiper-day .swiper-button-prev {
-  height: 40px;
-  width: 40px;
-  z-index: 11;
-}
-.swiper-day .swiper-button-next::after,
-.swiper-day .swiper-button-prev::after {
   font-size: 15px;
 }
 
