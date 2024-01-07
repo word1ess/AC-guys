@@ -5707,7 +5707,11 @@ body {
   }
   .header__logo a {
     height: 140px;
-    width: 160px;
+    width: 100px;
+  }
+  .header__logo a img {
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .header__links {
     gap: 6px;
