@@ -29386,17 +29386,30 @@ defaultSwiper(
   false,
   ".swiper-video-pagination"
 );
-defaultSwiper(
-  ".swiper-video",
-  2.6,
-  120,
-  true,
-  true,
-  "",
-  "",
-  "horizontal",
-  false
-);
+
+new Swiper(".swiper-video", {
+  slidesPerView: 1,
+  spaceBetween: 15,
+  centeredSlides: true,
+  loop: true,
+  pagination: {
+    el: ".swiper-video-pagination",
+  },
+  direction: "horizontal",
+  mousewheel: {
+    releaseOnEdges: true,
+  },
+  breakpoints: {
+    577: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    769: {
+      slidesPerView: 2.6,
+      spaceBetween: 120,
+    },
+  },
+});
 defaultSwiper(
   ".swiper-recently",
   4,
