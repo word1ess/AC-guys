@@ -29285,6 +29285,12 @@ function readFile(parent) {
   };
 }
 
+$(".submenu").prev().addClass("has-submenu");
+$(".has-submenu").click(function (e) {
+  $(this).toggleClass("active");
+  $(this).next().toggleClass("active");
+});
+
 function swiperGrid(slider, slides, space, rows, prev, next) {
   new Swiper(slider, {
     spaceBetween: space,
@@ -29341,9 +29347,7 @@ function defaultSwiper(
   loop = false,
   prevEl,
   nextEl,
-  direction = "horizontal",
-  releaseOnEdges = false,
-  pag = ""
+  direction = "horizontal"
 ) {
   new Swiper(slider, {
     slidesPerView: 1,
@@ -29354,13 +29358,7 @@ function defaultSwiper(
       nextEl,
       prevEl,
     },
-    pagination: {
-      el: pag,
-    },
     direction,
-    mousewheel: {
-      releaseOnEdges,
-    },
     breakpoints: {
       577: {
         slidesPerView: 3,
@@ -29374,30 +29372,19 @@ function defaultSwiper(
   });
 }
 
-defaultSwiper(
-  ".swiper-video",
-  2.6,
-  120,
-  true,
-  true,
-  "",
-  "",
-  "horizontal",
-  false,
-  ".swiper-video-pagination"
-);
-
 new Swiper(".swiper-video", {
   slidesPerView: 1,
   spaceBetween: 15,
   centeredSlides: true,
   loop: true,
+  loopAdditionalSlides: 3,
+  loopedSlides: 1,
   pagination: {
     el: ".swiper-video-pagination",
   },
-  direction: "horizontal",
-  mousewheel: {
-    releaseOnEdges: true,
+  navigation: {
+    nextEl: ".swiper-video-next",
+    prevEl: ".swiper-video-prev",
   },
   breakpoints: {
     577: {
@@ -29410,6 +29397,7 @@ new Swiper(".swiper-video", {
     },
   },
 });
+
 defaultSwiper(
   ".swiper-recently",
   4,
