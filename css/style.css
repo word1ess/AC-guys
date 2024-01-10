@@ -6154,6 +6154,10 @@ body {
   .header__address-hover.active {
     top: 15rem;
   }
+  .header__links a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .submenu.active {
