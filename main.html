@@ -12,22 +12,28 @@
         <div class="wrapper">
             <header class="header">
                 <div class="container">
+                    <div class="header__sale mobile py-2.5 px-8 rounded-lg">
+                        <p class="text-gradient flex items-center justify-center gap-2.5">
+                            <span>20%</span>
+                            Todays special Deal in your city
+                        </p>
+                    </div>
                     <div class="header__row">
                         <div class="header__logo">
                             <a href="index.html">
                                 <img src="./img/svgicons/logo.svg" alt="logo">
                             </a>
                         </div>
-                        <a href="#" class="btn btn__mobile text-2xl flex items-center justify-center gap-4 flex-auto">
-                            Book online now
-                            <img src="./img/svgicons/24.svg" alt="24">
+                        <a href="#" class="btn mobile text-2xl">
+                            <p>Book online now</p>
+                            <img src="./img/svgicons/flag.svg" alt="24">
                         </a>
                         <div class="header__burger">
                             <span></span>
                         </div>
                         <div class="header__menu">
                             <div class="header__top">
-                                <button class="header__address flex gap-3 items-center">
+                                <button class="header__address pc flex gap-3 items-center">
                                     <div class="btn">
                                         <img src="./img/svgicons/address.svg" alt="address">
                                     </div>
@@ -38,13 +44,13 @@
                                         your address.
                                     </div>
                                 </button>
-                                <div class="header__sale py-2.5 px-8 rounded-lg">
+                                <div class="header__sale pc py-2.5 px-8 rounded-lg">
                                     <p class="text-gradient flex items-center justify-center gap-2.5">
                                         <span>20%</span>
                                         Todays special Deal in your city
                                     </p>
                                 </div>
-                                <a class="header__phone flex gap-3 items-center flex-row-reverse" href="tel: +1-818-888-10-10">
+                                <a class="header__phone pc flex gap-3 items-center flex-row-reverse" href="tel: +1-818-888-10-10">
                                     <div class="btn">
                                         <img src="./img/svgicons/phone.svg" alt="phone">
                                     </div>
@@ -55,23 +61,57 @@
                                 <nav class="header__links">
                                     <a href="#" class="text-neutral-800 font-bold text-lg uppercase">ABOUT US</a>
                                     <a href="#" class="text-neutral-800 font-bold text-lg uppercase">BEST OFFERS</a>
-                                    <a href="#" class="text-neutral-800 font-bold text-lg uppercase">SERVICES</a>
+                                    <div class="header__link">
+                                        <a href="#" class="text-neutral-800 font-bold text-lg uppercase">SERVICES</a>
+                                        <div class="submenu">
+                                            <a href="#">Heating repair</a>
+                                            <a href="#">Heating repair</a>
+                                            <a href="#">Heating repair</a>
+                                            <a href="#">Heating repair</a>
+                                            <a href="#">Heating repair</a>
+                                            <a href="#">Heating repair</a>
+                                            <a href="#">Heating repair</a>
+                                            <a href="#">Heating repair</a>
+                                            <a href="#">Heating repair</a>
+                                            <a href="#">Heating repair</a>
+                                            <a href="#">Heating repair</a>
+                                        </div>
+                                    </div>
                                     <a href="#" class="text-neutral-800 font-bold text-lg uppercase">REVIEWS</a>
                                     <a href="#" class="text-neutral-800 font-bold text-lg uppercase">EQUIPMENT</a>
                                     <a href="#" class="text-neutral-800 font-bold text-lg uppercase">BLOG</a>
                                     <a href="#" class="text-neutral-800 font-bold text-lg uppercase">PROJECT PHOTOS</a>
                                 </nav>
-                                <a href="#" class="btn text-2xl flex items-center justify-center gap-4 flex-auto">
-                                    Book online now
-                                    <img src="./img/svgicons/24.svg" alt="24">
+                                <a href="#" class="btn pc text-2xl flex items-center justify-center gap-4 flex-auto">
+                                    <p>Book online now</p>
+                                    <img src="./img/svgicons/flag.svg" alt="24">
                                 </a>
                             </div>
                         </div>
                     </div>
+                    <div class="flex items-center justify-between gap-4">
+                        <button class="header__address mobile flex gap-3 items-center">
+                            <div class="btn">
+                                <img src="./img/svgicons/address.svg" alt="address">
+                            </div>
+                            <p class="text-neutral-800 font-medium text-base">73 Canal Street, California, LA</p>
+                            <div class="header__address-hover">
+                                We're showing you current address. But you can
+                                <span>change</span>
+                                your address.
+                            </div>
+                        </button>
+                        <a class="header__phone mobile flex gap-3 items-center flex-row-reverse" href="tel: +1-818-888-10-10">
+                            <div class="btn">
+                                <img src="./img/svgicons/phone.svg" alt="phone">
+                            </div>
+                            <p class="text-neutral-800 font-medium text-base">+1-818-888-10-10</p>
+                        </a>
+                    </div>
                 </div>
             </header>
             <main class="content">
-                <article class="intro">
+                <article class="intro article">
                     <div class="container">
                         <div class="intro__row flex gap-4">
                             <div class="intro__info flex-auto">
@@ -100,12 +140,12 @@
                         </div>
                     </div>
                 </article>
-                <section class="special section bg-grey">
+                <section class="special special__with-arrow section bg-grey">
                     <div class="container">
                         <h2 class="text-gradient font-bold text-6xl text-center mb-2">Special Deals</h2>
                         <p class="font-medium text-3xl text-center mb-20">We offer a special deals for Repair service and Installation & Replacement services</p>
                         <div class="special__row grid grid-cols-2 gap-20">
-                            <div class="special__item">
+                            <div class="special__item special__item__top flex flex-col">
                                 <header class="special__header gradient relative flex items-center justify-center h-40 rounded-t-xl">
                                     <img class="absolute left-20" src="./img/svgicons/clarity-1.svg" alt="clarity-1">
                                     <h3 class="font-bold text-4xl text-center">
@@ -122,10 +162,10 @@
                                         Lifetime work guarantee
                                     </p>
                                     <a href="#" class="mb-12">read more</a>
-                                    <a href="#" class="btn text-white">Book now</a>
                                 </main>
+                                <a href="#" class="btn text-white">Book now</a>
                             </div>
-                            <div class="special__item">
+                            <div class="special__item special__item__bottom">
                                 <header class="special__header black relative flex items-center justify-center h-40 rounded-t-xl">
                                     <img class="absolute left-20" src="./img/svgicons/clarity-2.svg" alt="clarity-2">
                                     <h3 class="font-bold text-4xl text-center">Repair service</h3>
@@ -137,8 +177,8 @@
                                         guarantee for the trouble-free operation of your old air conditioner
                                     </p>
                                     <a href="#" class="mb-12">read more</a>
-                                    <a href="#" class="btn">Book now</a>
                                 </main>
+                                <a href="#" class="btn">Book now</a>
                             </div>
                         </div>
                     </div>
@@ -254,7 +294,7 @@
                         </main>
                     </div>
                 </article>
-                <section class="section bg-grey">
+                <section class="section bg-grey section__more">
                     <div class="container">
                         <div class="section__row flex gap-6">
                             <div class="section__img overflow-hidden rounded-xl">
@@ -266,6 +306,20 @@
                                 </header>
                                 <p class="text">A global print fulfillment company partnered with Mason Interactive to grow omnichannel sales via Search Engine Optimization (SEO). During the course of the engagement, the client saw a 134% increase in organic traffic, resulting in a measurable increase in leads, and sales.</p>
                                 <p class="text">The core SEO strategy has remained steady from day one: provide high-quality content to website visitors and be an authoritative thought leader in the industry; creating new, highly-useful content for the blog and landing pages; focusing on on-page optimizations targeting high-value search-terms.</p>
+                                <button class="mb-12 more-btn">read more</button>
+                                <div class="more-popup">
+                                    <div class="container">
+                                        <div class="more-popup__row">
+                                            <p class="text">A global print fulfillment company partnered with Mason Interactive to grow omnichannel sales via Search Engine Optimization (SEO). During the course of the engagement, the client saw a 134% increase in organic traffic, resulting in a measurable increase in leads, and sales.</p>
+                                            <p class="text">The core SEO strategy has remained steady from day one: provide high-quality content to website visitors and be an authoritative thought leader in the industry; creating new, highly-useful content for the blog and landing pages; focusing on on-page optimizations targeting high-value search-terms.</p>
+                                            <p class="text">A global print fulfillment company partnered with Mason Interactive to grow omnichannel sales via Search Engine Optimization (SEO). During the course of the engagement, the client saw a 134% increase in organic traffic, resulting in a measurable increase in leads, and sales.</p>
+                                            <p class="text">The core SEO strategy has remained steady from day one: provide high-quality content to website visitors and be an authoritative thought leader in the industry; creating new, highly-useful content for the blog and landing pages; focusing on on-page optimizations targeting high-value search-terms.</p>
+                                        </div>
+                                        <div class="close">
+                                            <img src="./img/svgicons/close.svg" alt="close">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -404,7 +458,7 @@
                                 </div>
                             </div>
                             <div class="customers__info flex flex-col items-center justify-center bg-grey">
-                                <img class="block mb-12" src="./img/reviews/1.png" alt="1">
+                                <img class="block mb-12" src="./img/special.png" alt="special">
                                 <div class="flex flex-col gap-10 items-center justify-center">
                                     <a href="#" class="btn">Online Book Now</a>
                                     <p>or</p>
@@ -456,8 +510,42 @@
                                         <p class="text-gradient text-xl">4.5</p>
                                     </div>
                                 </div>
+                                <div class="swiper-slide">
+                                    <video src="./img/1.mp4" controls></video>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-2xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <video src="./img/1.mp4" controls></video>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-2xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <video src="./img/1.mp4" controls></video>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-2xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <video src="./img/1.mp4" controls></video>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-2xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-xl">4.5</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="swiper-pagination swiper-video-pagination"></div>
+                            <div class="swiper-button-prev swiper-video-prev"></div>
+                            <div class="swiper-button-next swiper-video-next"></div>
                         </div>
                     </div>
                 </section>

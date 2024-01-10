@@ -29088,11 +29088,26 @@ var Swiper = (function () {
 $(".header__burger").click(function name(event) {
   $(".header__burger, .header__menu").toggleClass("burger-active");
 });
-// подвал
+$(".submenu").prev().addClass("has-submenu");
 if (window.screen.width < 992) {
   $(".block__title").click(function name(event) {
     $(this).toggleClass("footer-active").next().slideToggle(300);
   });
+  $(".has-submenu").click(function (e) {
+    $(this).toggleClass("active");
+    $(this).next().toggleClass("active");
+  });
+} else {
+  $(".header__link").hover(
+    function (e) {
+      $(".has-submenu").addClass("active");
+      $(".has-submenu").next().addClass("active");
+    },
+    function (e) {
+      $(".has-submenu").removeClass("active");
+      $(".has-submenu").next().removeClass("active");
+    }
+  );
 }
 
 $(".ui-slider-handle").draggable();
@@ -29124,6 +29139,10 @@ function openClickPopup(parent, clickedBlock, hiddenBlock) {
   $(clickedBlock).click(function (e) {
     $(hiddenBlock).toggleClass("active");
     $(this).toggleClass("active");
+  });
+  $(".close").click(function (e) {
+    $(hiddenBlock).removeClass("active");
+    $(clickedBlock).removeClass("active");
   });
   $(document).mouseup(function (e) {
     if ($(parent).has(e.target).length === 0) {
@@ -29198,6 +29217,8 @@ document.querySelector(".write-review__row") &&
     ".write-review__button",
     ".write-review"
   );
+document.querySelector(".more-popup") &&
+  openClickPopup(".more-popup", ".more-btn", ".more-popup");
 
 $(".header__address").hover(
   function (e) {
@@ -29341,9 +29362,7 @@ function defaultSwiper(
   loop = false,
   prevEl,
   nextEl,
-  direction = "horizontal",
-  releaseOnEdges = false,
-  pag = ""
+  direction = "horizontal"
 ) {
   new Swiper(slider, {
     slidesPerView: 1,
@@ -29354,13 +29373,7 @@ function defaultSwiper(
       nextEl,
       prevEl,
     },
-    pagination: {
-      el: pag,
-    },
     direction,
-    mousewheel: {
-      releaseOnEdges,
-    },
     breakpoints: {
       577: {
         slidesPerView: 3,
@@ -29374,29 +29387,32 @@ function defaultSwiper(
   });
 }
 
-defaultSwiper(
-  ".swiper-video",
-  2.6,
-  120,
-  true,
-  true,
-  "",
-  "",
-  "horizontal",
-  false,
-  ".swiper-video-pagination"
-);
-defaultSwiper(
-  ".swiper-video",
-  2.6,
-  120,
-  true,
-  true,
-  "",
-  "",
-  "horizontal",
-  false
-);
+new Swiper(".swiper-video", {
+  slidesPerView: 1,
+  spaceBetween: 15,
+  centeredSlides: true,
+  loop: true,
+  loopAdditionalSlides: 3,
+  loopedSlides: 1,
+  pagination: {
+    el: ".swiper-video-pagination",
+  },
+  navigation: {
+    nextEl: ".swiper-video-next",
+    prevEl: ".swiper-video-prev",
+  },
+  breakpoints: {
+    577: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    769: {
+      slidesPerView: 2.6,
+      spaceBetween: 120,
+    },
+  },
+});
+
 defaultSwiper(
   ".swiper-recently",
   4,
